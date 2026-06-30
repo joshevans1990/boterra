@@ -1,0 +1,45 @@
+---
+import "../styles/global.css";
+import { company } from "../data/products.js";
+const { title, description } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="wrap">
+        <a href="/" class="brand">Boterra<span class="dot">.</span></a>
+        <nav class="nav">
+          <a href="/#catalogue">Catalogue</a>
+          <a href="/#sourcing">Sourcing</a>
+          <a href="/#contact">Enquiries</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <slot />
+    </main>
+
+    <footer class="site-footer">
+      <div class="wrap">
+        <span>{company.name} — UK-registered B2B distributor</span>
+        <span>© {new Date().getFullYear()}</span>
+      </div>
+    </footer>
+  </body>
+</html>

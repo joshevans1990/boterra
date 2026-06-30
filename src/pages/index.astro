@@ -1,0 +1,123 @@
+---
+import Base from "../layouts/Base.astro";
+import { products, company } from "../data/products.js";
+
+const heroProducts = products.filter((p) => p.hero);
+const extracts = products.filter((p) => !p.hero);
+---
+
+<Base title={`${company.name} — Certified African Botanicals`} description={company.tagline}>
+  <!-- Hero -->
+  <section class="hero">
+    <div class="wrap">
+      <span class="eyebrow">Certified · Traceable · At source</span>
+      <h1>Certified African botanicals, distribution-grade.</h1>
+      <p class="lede">{company.tagline}</p>
+      <div class="actions">
+        <a href="#catalogue" class="btn btn-primary">View catalogue</a>
+        <a href="#contact" class="btn btn-ghost">Request specifications</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Hero products -->
+  <section class="section" id="catalogue">
+    <div class="wrap">
+      <span class="eyebrow">Catalogue</span>
+      <h2>Hero ingredients</h2>
+      <p class="intro">
+        Sourced direct from accredited producers, supplied with full documentation.
+        Pricing and MOQs available on enquiry.
+      </p>
+      <div class="grid">
+        {heroProducts.map((p) => (
+          <article class="card hero-product">
+            <span class="tag">Hero · {p.origin}</span>
+            <h3>{p.name}</h3>
+            <span class="inci">{p.inci}</span>
+            <p class="summary">{p.summary}</p>
+            <div class="meta">
+              <span><b>Producer</b> &nbsp;{p.producer}</span>
+              <span><b>Grade</b> &nbsp;{p.grade}</span>
+              <span><b>Notes</b> &nbsp;{p.notes}</span>
+            </div>
+            <div class="certs">
+              {p.certifications.map((c) => <span class="cert">{c}</span>)}
+            </div>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Cold-water extracts -->
+  <section class="section">
+    <div class="wrap">
+      <span class="eyebrow">Catalogue</span>
+      <h2>Cold-water extracts</h2>
+      <p class="intro">
+        Water-soluble South African extracts from Rooibos Ltd — spray-dried, suited to
+        actives, skincare and functional applications.
+      </p>
+      <div class="grid">
+        {extracts.map((p) => (
+          <article class="card">
+            <span class="tag">{p.origin}</span>
+            <h3>{p.name}</h3>
+            <span class="inci">{p.inci}</span>
+            <p class="summary">{p.summary}</p>
+            <div class="meta">
+              <span><b>Grade</b> &nbsp;{p.grade}</span>
+            </div>
+            <div class="certs">
+              {p.certifications.map((c) => <span class="cert">{c}</span>)}
+            </div>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Sourcing thesis -->
+  <section class="section thesis" id="sourcing">
+    <div class="wrap">
+      <span class="eyebrow">Sourcing</span>
+      <h2>We close the distribution gap.</h2>
+      <p class="intro">
+        Africa has accredited producers with world-class material and strong certifications —
+        but little of the formal UK and EU infrastructure that European manufacturers need.
+        Boterra is that infrastructure.
+      </p>
+      <div class="points">
+        <div class="point">
+          <span class="n">01</span>
+          <h3>Direct relationships</h3>
+          <p>We source from named producers we know, not anonymous brokers — so provenance holds all the way back to the cooperative or farm.</p>
+        </div>
+        <div class="point">
+          <span class="n">02</span>
+          <h3>Full certification</h3>
+          <p>Organic, fair-trade and traceability documentation supplied as standard. Specs and CoAs available on request.</p>
+        </div>
+        <div class="point">
+          <span class="n">03</span>
+          <h3>UK-based supply</h3>
+          <p>A single UK counterparty handling sourcing, compliance and logistics — removing the friction of dealing across continents.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="section contact" id="contact">
+    <div class="wrap">
+      <span class="eyebrow">Enquiries</span>
+      <h2>Request specifications or pricing.</h2>
+      <p class="intro">
+        Tell us the ingredient, grade and approximate volume, and we'll come back with
+        specifications, certification and a quote.
+      </p>
+      <a class="email" href={`mailto:${company.email}?subject=Boterra%20enquiry`}>{company.email}</a>
+    </div>
+  </section>
+</Base>
