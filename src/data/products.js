@@ -1,92 +1,93 @@
-// Single source of truth for Boterra's catalogue.
-// Edit specs, origins and certifications here — pages read from this file.
+// Single source of truth for Boterra's public catalogue.
+// PUBLIC-FACING: no producer names, no origins, no asserted certifications.
+// Keep sourcing detail in private records, not here.
 
 export const products = [
   {
     slug: "nilotica-shea-butter",
     name: "Nilotica Shea Butter",
     inci: "Butyrospermum parkii (Shea) Butter",
-    origin: "Northern Uganda",
-    producer: "GNOM / Maisha Organics",
-    grade: "Unrefined, Grade A",
-    certifications: ["Organic", "Fair for Life", "Traceable to cooperative"],
     hero: true,
     summary:
       "East African nilotica shea — softer, lower-melt and faster-absorbing than West African varieties, with a naturally mild scent profile.",
-    notes:
-      "Cold-pressed and filtered. Supplied in food-grade pails; bulk on request.",
+    benefits: [
+      "Softer, creamier texture than West African shea",
+      "Lower melting point — absorbs quickly into skin",
+      "Naturally mild, low-odour profile",
+      "Rich in oleic and linoleic fatty acids",
+    ],
   },
   {
     slug: "prickly-pear-seed-oil",
     name: "Prickly Pear Seed Oil",
     inci: "Opuntia ficus-indica Seed Oil",
-    origin: "Tunisia",
-    producer: "Nopal Tunisie",
-    grade: "Virgin, cold-pressed",
-    certifications: ["Organic", "Traceable to farm"],
     hero: true,
     summary:
-      "One of the most labour-intensive oils in the world — high in vitamin E and linoleic acid, prized for facial and high-end formulation work.",
-    notes:
-      "First cold pressing. Nitrogen-flushed packaging to protect tocopherol content.",
+      "A rare, premium facial oil — exceptionally high in vitamin E and linoleic acid, prized for high-end skincare formulation.",
+    benefits: [
+      "One of the highest natural vitamin E (tocopherol) contents of any oil",
+      "High in linoleic acid — supports skin barrier",
+      "Fast-absorbing, non-greasy finish",
+      "Valued in premium facial and anti-ageing formulation",
+    ],
   },
   {
     slug: "green-rooibos-extract",
-    name: "Green Rooibos Extract (E2OCJ)",
+    name: "Green Rooibos Extract",
     inci: "Aspalathus linearis Leaf Extract",
-    origin: "Western Cape, South Africa",
-    producer: "Rooibos Ltd",
-    grade: "Cold-water soluble extract",
-    certifications: ["Certified origin", "Traceable"],
     hero: false,
     summary:
-      "Unfermented rooibos extract with high aspalathin content — the highest-value cold-water grade in the range.",
-    notes: "Spray-dried, water-soluble. Suited to actives and beverage applications.",
+      "Unfermented rooibos extract with high aspalathin content — water-soluble and suited to actives and functional applications.",
+    benefits: [
+      "High aspalathin (antioxidant) content",
+      "Cold-water soluble",
+      "Suited to actives and beverage applications",
+    ],
   },
   {
     slug: "rosehip-extract",
-    name: "Rosehip Extract (E5OCJ)",
+    name: "Rosehip Extract",
     inci: "Rosa canina Fruit Extract",
-    origin: "Western Cape, South Africa",
-    producer: "Rooibos Ltd",
-    grade: "Cold-water soluble extract",
-    certifications: ["Certified origin", "Traceable"],
     hero: false,
     summary:
       "Vitamin-C-rich cold-water extract for skincare actives and functional formulation.",
-    notes: "Spray-dried, water-soluble.",
+    benefits: [
+      "Naturally rich in vitamin C",
+      "Cold-water soluble",
+      "Suited to skincare actives",
+    ],
   },
   {
     slug: "honeybush-extract",
-    name: "Honeybush Extract (E4OCJ)",
+    name: "Honeybush Extract",
     inci: "Cyclopia Leaf Extract",
-    origin: "Western Cape, South Africa",
-    producer: "Rooibos Ltd",
-    grade: "Cold-water soluble extract",
-    certifications: ["Certified origin", "Traceable"],
     hero: false,
     summary:
-      "Naturally sweet, antioxidant-rich extract — a distinctive South African botanical with growing formulation demand.",
-    notes: "Spray-dried, water-soluble.",
+      "Naturally sweet, antioxidant-rich extract — a distinctive botanical with growing formulation demand.",
+    benefits: [
+      "Antioxidant-rich",
+      "Naturally sweet profile",
+      "Cold-water soluble",
+    ],
   },
   {
     slug: "red-rooibos-extract",
-    name: "Red Rooibos Extract (E1OCJ)",
+    name: "Red Rooibos Extract",
     inci: "Aspalathus linearis Leaf Extract",
-    origin: "Western Cape, South Africa",
-    producer: "Rooibos Ltd",
-    grade: "Cold-water soluble extract",
-    certifications: ["Certified origin", "Traceable"],
     hero: false,
     summary:
       "Fermented rooibos extract — the classic red grade, antioxidant-rich and widely recognised.",
-    notes: "Spray-dried, water-soluble.",
+    benefits: [
+      "Classic fermented red rooibos",
+      "Antioxidant-rich",
+      "Cold-water soluble",
+    ],
   },
 ];
 
 export const company = {
   name: "Boterra Materials",
   tagline:
-    "A UK-based B2B distributor of certified African botanical ingredients, connecting European cosmetic and personal-care manufacturers with traceable, fully-certified supply at source.",
+    "A UK-based B2B distributor of African botanical ingredients for cosmetic and personal-care manufacturers — traceable supply, sourced direct.",
   email: "blair@boterramaterials.com",
 };
