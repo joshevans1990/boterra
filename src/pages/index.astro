@@ -26,24 +26,19 @@ const extracts = products.filter((p) => !p.hero);
       <span class="eyebrow">Catalogue</span>
       <h2>Hero ingredients</h2>
       <p class="intro">
-        Sourced direct from accredited producers, supplied with full documentation.
-        Pricing and MOQs available on enquiry.
+        Sourced direct, supplied with full documentation. Specifications, certification
+        and pricing available on enquiry.
       </p>
       <div class="grid">
         {heroProducts.map((p) => (
           <article class="card hero-product">
-            <span class="tag">Hero · {p.origin}</span>
+            <span class="tag">Hero ingredient</span>
             <h3>{p.name}</h3>
             <span class="inci">{p.inci}</span>
             <p class="summary">{p.summary}</p>
-            <div class="meta">
-              <span><b>Producer</b> &nbsp;{p.producer}</span>
-              <span><b>Grade</b> &nbsp;{p.grade}</span>
-              <span><b>Notes</b> &nbsp;{p.notes}</span>
-            </div>
-            <div class="certs">
-              {p.certifications.map((c) => <span class="cert">{c}</span>)}
-            </div>
+            <ul class="benefits">
+              {p.benefits.map((b) => <li>{b}</li>)}
+            </ul>
           </article>
         ))}
       </div>
@@ -56,22 +51,19 @@ const extracts = products.filter((p) => !p.hero);
       <span class="eyebrow">Catalogue</span>
       <h2>Cold-water extracts</h2>
       <p class="intro">
-        Water-soluble South African extracts from Rooibos Ltd — spray-dried, suited to
-        actives, skincare and functional applications.
+        Water-soluble botanical extracts — spray-dried, suited to actives, skincare
+        and functional applications.
       </p>
       <div class="grid">
         {extracts.map((p) => (
           <article class="card">
-            <span class="tag">{p.origin}</span>
+            <span class="tag">Extract</span>
             <h3>{p.name}</h3>
             <span class="inci">{p.inci}</span>
             <p class="summary">{p.summary}</p>
-            <div class="meta">
-              <span><b>Grade</b> &nbsp;{p.grade}</span>
-            </div>
-            <div class="certs">
-              {p.certifications.map((c) => <span class="cert">{c}</span>)}
-            </div>
+            <ul class="benefits">
+              {p.benefits.map((b) => <li>{b}</li>)}
+            </ul>
           </article>
         ))}
       </div>
@@ -84,20 +76,20 @@ const extracts = products.filter((p) => !p.hero);
       <span class="eyebrow">Sourcing</span>
       <h2>We close the distribution gap.</h2>
       <p class="intro">
-        Africa has accredited producers with world-class material and strong certifications —
-        but little of the formal UK and EU infrastructure that European manufacturers need.
+        Africa produces world-class botanical materials, but little of the formal UK and
+        EU infrastructure that European manufacturers need to source them with confidence.
         Boterra is that infrastructure.
       </p>
       <div class="points">
         <div class="point">
           <span class="n">01</span>
           <h3>Direct relationships</h3>
-          <p>We source from named producers we know, not anonymous brokers — so provenance holds all the way back to the cooperative or farm.</p>
+          <p>We work directly with producers we know, not anonymous brokers — so provenance holds back to source.</p>
         </div>
         <div class="point">
           <span class="n">02</span>
-          <h3>Full certification</h3>
-          <p>Organic, fair-trade and traceability documentation supplied as standard. Specs and CoAs available on request.</p>
+          <h3>Documentation</h3>
+          <p>Specifications, certification and CoAs supplied on enquiry, so you can verify every input before you commit.</p>
         </div>
         <div class="point">
           <span class="n">03</span>
